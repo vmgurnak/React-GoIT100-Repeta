@@ -6,14 +6,14 @@
  * - scrollTo
  */
 
-import { useRef } from "react";
+import { useRef } from 'react';
 
 const formStyles = {
-  display: "grid",
+  display: 'grid',
   width: 320,
   gap: 8,
   padding: 8,
-  border: "1px solid black",
+  border: '1px solid black',
 };
 
 export default function RefExample() {
@@ -21,10 +21,12 @@ export default function RefExample() {
 
   const handleScroll = () => {
     const form = formRef.current;
+    console.log(form);
     const dims = form.getBoundingClientRect();
+    console.log(dims);
     window.scrollTo({
       top: dims.top,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 

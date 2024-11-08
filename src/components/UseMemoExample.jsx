@@ -1,15 +1,15 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo } from 'react';
 
 export default function UseMemoExample() {
   const [a, setA] = useState(0);
   const [b, setB] = useState(0);
   const [c, setC] = useState(0);
 
-  // console.log("Calculating value: a + b");
+  console.log('Calculating value: a + b');
   // const value = a + b;
 
   const memoizedValue = useMemo(() => {
-    console.log("Calculating memoizedValue: a + b");
+    console.log('Calculating memoizedValue: a + b');
     return a + b;
   }, [a, b]);
 

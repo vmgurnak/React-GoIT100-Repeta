@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 /**
  * Подвійне монтування і запуск інтервала
@@ -15,16 +15,16 @@ const Timer = () => {
     intervalRef.current = setInterval(() => {
       console.log(Date.now());
     }, 1000);
-    console.log("useEffect", intervalRef);
+    console.log('useEffect', intervalRef);
 
     return () => {
-      console.log("cleanup", intervalRef);
+      console.log('cleanup', intervalRef);
       clearInterval(intervalRef.current);
     };
   }, []);
 
   const stopInterval = () => {
-    console.log("stopInterval", intervalRef);
+    console.log('stopInterval', intervalRef);
     clearInterval(intervalRef.current);
   };
 
@@ -43,7 +43,7 @@ export default function TimerWrapper() {
   return (
     <div>
       <button onClick={() => setIsVisible(!isVisible)}>
-        {isVisible ? "Hide" : "Show"}
+        {isVisible ? 'Hide' : 'Show'}
       </button>
       {isVisible && <Timer />}
     </div>
